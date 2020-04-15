@@ -1,0 +1,52 @@
+.Hero-DataContainer{
+    position: absolute;
+    z-index: 1;
+    left: calc((100% - 400px) / 2);
+    top: calc((100% - 250px) / 2);
+    width: 400px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.Hero-Title {
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.Hero-Organizer {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    color: #c59613;
+    margin-bottom: 30px;
+}
+
+.Hero-Date {
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.Hero-Login {
+    display: block;
+    text-decoration: none;
+    width: 160px;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #c59613;
+    border-radius: 6px;
+    font-weight: 700;
+    color: #fff;
+    transition: all 0.3s ease-out;
+    margin: 0 auto;
+}
+
+.Hero-Login:hover {
+    background-color: #9e7911;
+}

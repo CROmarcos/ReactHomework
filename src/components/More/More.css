@@ -1,0 +1,9 @@
+
+.More-CardContainer {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.More-CardContainer::after {
+    clear: both;
+}

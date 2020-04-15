@@ -1,4 +1,5 @@
 import React from 'react';
+import './Navigation.css';
 import {Link} from 'react-router-dom';
 
 const links={
@@ -12,20 +13,18 @@ const Navigation=()=>{
     return(
         <div className="MainNavi">
             <ul className="MainNavi-List">
-                {/*
                 <li className="MainNavi-ListItem">
-                    <link className="MainNavi-Link" to="/speakers">{links.speakers}</link>
+                    <Link className="MainNavi-Link" to="/">{links.speakers}</Link>
                 </li>
                 <li className="MainNavi-ListItem">
-                    <link className="MainNavi-Link" to="/events">{links.events}</link>
+                    <Link className="MainNavi-Link" to="/">{links.events}</Link>
                 </li>
                 <li className="MainNavi-ListItem">
-                    <link className="MainNavi-Link" to="/contacts">{links.contacts}</link>
+                    <Link className="MainNavi-Link" to="/">{links.contacts}</Link>
                 </li>
                 <li className="MainNavi-ListItem">
-                    <link className="MainNavi-Link" to="/login">{links.login}</link>
+                    <Link className="MainNavi-Link" to="/">{links.login}</Link>
                 </li>
-                */}
             </ul>
         </div>
     );

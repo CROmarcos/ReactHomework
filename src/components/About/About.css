@@ -1,0 +1,29 @@
+.About {
+    margin-bottom: 70px;
+}
+
+.About-Text {
+    max-width: 750px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.About-FindOutMore {    
+    display: block;
+    text-decoration: none;
+    width: 160px;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #c59613;
+    border-radius: 6px;
+    font-weight: 700;
+    color: #fff;
+    transition: all 0.3s ease-out;
+    margin: 0 auto;
+}
+
+.About-FindOutMore:hover {
+    background-color: #9e7911;
+}
