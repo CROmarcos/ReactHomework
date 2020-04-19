@@ -34,7 +34,7 @@ const title={
 const More=()=>{
     return(
         <div className="More">
-            <About/>
+            <About leftSide={false}/>
             <Link className="More-FindOut" to="/">{link}</Link>
             <div className="More-CardContainer">
                 <Card url={source.about} altText={altText.about} title={title.about} />

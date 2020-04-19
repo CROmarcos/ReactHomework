@@ -11,7 +11,7 @@ const LastYear=()=>{
         <div className="LastYear-Inner">
             <h2 className="LastYear-Title">{sectionTitle}</h2>
             <section className="LastYear-InnerAbout">
-                <About/>
+                <About leftSide={true}/>
             </section>
             <figure>
                 <img src={LastYearPic} alt={altText}/>
