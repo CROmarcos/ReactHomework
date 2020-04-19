@@ -2,10 +2,10 @@
     width: 1280px;
     margin: 0 auto;
     grid-template-columns: repeat(4, 1fr);
-}
 
-.More-CardContainer::after {
-    clear: both;
+    &::after {
+        clear: both;
+    }
 }
 
 .More-FindOut {
@@ -22,8 +22,8 @@
     transition: all 0.3s ease-out;
     margin: 0 auto;
     margin-bottom: 70px;
-}
 
-.More-FindOut:hover {
-    background-color: #9e7911;
+    &:hover {
+        background-color: #9e7911;
+    }
 }

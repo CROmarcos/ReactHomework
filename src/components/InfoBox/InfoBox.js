@@ -1,5 +1,5 @@
 import React from 'react';
-import './InfoBox.css';
+import './InfoBox.scss';
 import InfoBoxSubheader from '../InfoBoxSubheader/InfoboxSubheader';
 import {Link} from 'react-router-dom';
 import LocationIcon from '../../assets/img/location-icon.png';

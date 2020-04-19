@@ -1,6 +1,6 @@
 import React from 'react';
 import InfoBox from '../InfoBox/InfoBox';
-import './EventsMain.css';
+import './EventsMain.scss';
 import EventsIcon from '../../assets/img/event-icon.png';
 
 const pageTitle='Događanja';

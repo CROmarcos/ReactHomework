@@ -1,5 +1,5 @@
 import React from 'react';
-import './HomeMain.css';
+import './HomeMain.scss';
 import Hero from '../Hero/Hero';
 import More from '../More/More';
 import LastYear from '../LastYear/LastYear'
@@ -9,7 +9,7 @@ const HomeMain=()=>{
         <main>
             <section className="HomeMain-SectionHero">
                 <div className="HomeMain-SectionHero-Inner">
-                    <div className="HomeMain-SectionHero-Container">
+                    <div className="HomeMain-SectionHero-Inner-Container">
                         <Hero />
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import './More.css';
+import './More.scss';
 import About from '../../components/About/About';
 import Card from '../../components/Card/Card';
 import CardAbout from '../../assets/img/about.jpg';

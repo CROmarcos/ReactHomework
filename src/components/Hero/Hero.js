@@ -1,5 +1,5 @@
 import React from 'react';
-import './Hero.css';
+import './Hero.scss';
 import {Link} from 'react-router-dom';
 
 const opis={
@@ -11,7 +11,7 @@ const opis={
 
 const Hero=()=>{
     return(
-        <div className="Hero-DataContainer">
+        <div className="Hero">
             <h1 className="Hero-Title">{opis.title}</h1>
             <span className="Hero-Organizer">{opis.organizer}</span>
             <p className="Hero-Date">{opis.date}</p>

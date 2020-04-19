@@ -1,5 +1,5 @@
 import React from 'react';
-import './Card.css';
+import './Card.scss';
 import {Link} from 'react-router-dom';
 
 const Card=(props)=>{
@@ -8,7 +8,7 @@ const Card=(props)=>{
             <figure>
                 <img src={props.url} alt={props.altText} />
             </figure>
-            <p className="CardTitle">{props.title}</p>
+            <p className="Card-Title">{props.title}</p>
         </Link>
     );
 }

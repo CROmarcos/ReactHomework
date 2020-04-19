@@ -1,6 +1,6 @@
 import React from 'react';
 import InfoBox from '../InfoBox/InfoBox';
-import './SpeakersMain.css';
+import './SpeakersMain.scss';
 import SpeakersIcon from '../../assets/img/speakers-icon.png';
 
 const pageTitle='Sudionici';

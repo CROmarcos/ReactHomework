@@ -1,5 +1,5 @@
 import React from 'react';
-import './LastYear.css';
+import './LastYear.scss';
 import About from '../../components/About/About';
 import LastYearPic from '../../assets/img/last-year.jpg';
 
@@ -9,8 +9,8 @@ const altText='FOI Careers 2019';
 const LastYear=()=>{
     return(
         <div className="LastYear-Inner">
-            <h2 className="LastYear-Title">{sectionTitle}</h2>
-            <section className="LastYear-InnerAbout">
+            <h2 className="LastYear-Inner-Title">{sectionTitle}</h2>
+            <section className="LastYear-Inner-About">
                 <About leftSide={true}/>
             </section>
             <figure>

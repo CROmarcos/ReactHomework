@@ -8,17 +8,17 @@
     background-position: center center;
     background-attachment: fixed;
     background-blend-mode: multiply;
-}
 
-.HomeMain-SectionHero-Inner {
-    max-width: 1280px;
-    margin: 0 auto;
-}
+    &-Inner {
+        max-width: 1280px;
+        margin: 0 auto;
 
-.HomeMain-SectionHero-Container {
-    position: relative;
-    height: 500px;
-    width: 1280px;
+        &-Container {
+            position: relative;
+            height: 500px;
+            width: 1280px;
+        }
+    }
 }
 
 .HomeMain-SectionMore {
