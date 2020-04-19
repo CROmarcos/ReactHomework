@@ -3,6 +3,11 @@
     max-width: 350px;
     margin: 0 auto;
     padding: 0 15px;
+    margin-bottom: 40px;
+
+    & InfoBox {
+        margin-bottom: 40px;
+    }
 }
 
 @media only screen and (min-width: 576px) {
@@ -11,6 +16,10 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         max-width: 1024px;
+
+        & InfoBox {
+            margin: inherit;
+        }
     }
 }
 
@@ -26,10 +35,3 @@
         padding: 0;
     }
 }
-
-/*
-@media only screen and (min-width: 576px){
-    .section-events .info-box {
-        margin: inherit;
-    }
-*/
