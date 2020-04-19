@@ -40,7 +40,7 @@ const More=()=>{
                 <Card url={source.about} altText={altText.about} title={title.about} />
                 <Card url={source.speakers} altText={altText.speakers} title={title.speakers} />
                 <Card url={source.agenda} altText={altText.agenda} title={title.agenda} />
-                <Card url={source.partners} altText={altText.partners} title={title.partners} />
+                <Card url={source.partners} altText={altText.partners} title={title.partners}/>
             </div>
         </div>
         

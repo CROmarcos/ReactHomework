@@ -1,6 +1,7 @@
 .More-CardContainer {
     width: 1280px;
     margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .More-CardContainer::after {

@@ -49,3 +49,26 @@
 .InfoBox-Join:hover {
     color: #58a510;
 }
+
+@media only screen and (min-width: 576px){
+    .section-events .info-box {
+        margin: inherit;
+    } 
+
+    .section-events {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 1024px;
+    }
+}
+
+.InfoBox-Subheader {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+
+.hidden {
+    display: none;
+}
