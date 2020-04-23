@@ -1,4 +1,4 @@
-export const Events =[
+const Events =[
     {
         title: 'How can we benefit from React Redux',
         location: 'Dvorana D09',
@@ -42,3 +42,5 @@ export const Events =[
         link: '/',
     }
 ]
+
+export default Events;
