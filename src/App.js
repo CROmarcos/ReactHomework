@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Home from './pages/Home';
 import Events from './pages/Events';
 import Speakers from './pages/Speakers';
+import ToDos from './pages/ToDos';
 import { Route } from 'react-router-dom';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Route exact path="/" component={Home}/>
       <Route path="/events" component={Events}/>
       <Route path="/speakers" component={Speakers}/>
+      <Route path="/todos" component={ToDos}/>
     </>
   );
 }
