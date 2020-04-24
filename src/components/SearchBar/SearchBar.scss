@@ -1,0 +1,12 @@
+.SearchBar {
+    width: 400px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #cecece;
+    border-radius: 6px;
+    margin: 0 auto;
+
+    &:focus {
+        border-color: #c59613;
+    }
+}

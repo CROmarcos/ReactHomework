@@ -2,6 +2,7 @@ import React from 'react';
 import InfoBox from '../InfoBox/InfoBox';
 import './SpeakersMain.scss';
 import SpeakersIcon from '../../assets/img/speakers-icon.png';
+import SearchBar from '../SearchBar/SearchBar';
 
 const pageTitle='Sudionici';
 
@@ -20,6 +21,9 @@ const SpeakersMain=()=>{
     return(
         <main>
             <h1 class="PageTitle">{pageTitle}</h1>
+            <section>
+                <SearchBar/>
+            </section>
             <section className="Speakers-Names">
                 <InfoBox url={SpeakersIcon} title={name.jbach} buttonText={button} hideEvent={true} />
                 <InfoBox url={SpeakersIcon} title={name.sbach} buttonText={button} hideEvent={true}/>

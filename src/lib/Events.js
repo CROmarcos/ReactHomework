@@ -1,4 +1,4 @@
-const Events =[
+const EventsArray=[
     {
         title: 'How can we benefit from React Redux',
         location: 'Dvorana D09',
@@ -43,4 +43,4 @@ const Events =[
     }
 ]
 
-export default Events;
+export default EventsArray;
