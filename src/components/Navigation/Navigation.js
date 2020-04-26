@@ -1,6 +1,5 @@
 import React from 'react';
-import './Navigation.scss';
-import {Link} from 'react-router-dom';
+import {MainNavi, MainNaviList, MainNaviListItem, MainNaviLink} from './NavigationStyle.js';
 
 const links={
     speakers: 'Sudionici',
@@ -11,22 +10,22 @@ const links={
 
 const Navigation=()=>{
     return(
-        <div className="MainNavi">
-            <ul className="MainNavi-List">
-                <li className="MainNavi-List-Item">
-                    <Link className="MainNavi-Link" to="/speakers">{links.speakers}</Link>
-                </li>
-                <li className="MainNavi-List-Item">
-                    <Link className="MainNavi-Link" to="/events">{links.events}</Link>
-                </li>
-                <li className="MainNavi-List-Item">
-                    <Link className="MainNavi-Link" to="/">{links.contacts}</Link>
-                </li>
-                <li className="MainNavi-List-Item">
-                    <Link className="MainNavi-Link" to="/">{links.login}</Link>
-                </li>
-            </ul>
-        </div>
+        <MainNavi>
+            <MainNaviList>
+                <MainNaviListItem>
+                    <MainNaviLink to="/speakers">{links.speakers}</MainNaviLink>
+                </MainNaviListItem>
+                <MainNaviListItem>
+                    <MainNaviLink to="/events">{links.events}</MainNaviLink>
+                </MainNaviListItem>
+                <MainNaviListItem>
+                    <MainNaviLink to="/">{links.contacts}</MainNaviLink>
+                </MainNaviListItem>
+                <MainNaviListItem>
+                    <MainNaviLink to="/">{links.login}</MainNaviLink>
+                </MainNaviListItem>
+            </MainNaviList>
+        </MainNavi>
     );
 }
 

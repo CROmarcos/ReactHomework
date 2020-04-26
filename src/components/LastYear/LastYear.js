@@ -1,5 +1,5 @@
 import React from 'react';
-import './LastYear.scss';
+import {LastYearInner, LastYearTitle, LastYearAbout, LastYearPictureContainer, LastYearImage} from './LastYearStyle.js';
 import About from '../../components/About/About';
 import LastYearPic from '../../assets/img/last-year.jpg';
 
@@ -8,15 +8,15 @@ const altText='FOI Careers 2019';
 
 const LastYear=()=>{
     return(
-        <div className="LastYear-Inner">
-            <h2 className="LastYear-Inner-Title">{sectionTitle}</h2>
-            <section className="LastYear-Inner-About">
+        <LastYearInner>
+            <LastYearTitle>{sectionTitle}</LastYearTitle>
+            <LastYearAbout>
                 <About leftSide={true}/>
-            </section>
-            <figure>
-                <img src={LastYearPic} alt={altText}/>
-            </figure>
-        </div>
+            </LastYearAbout>
+            <LastYearPictureContainer>
+                <LastYearImage src={LastYearPic} alt={altText}/>
+            </LastYearPictureContainer>
+        </LastYearInner>
     );
 }
 

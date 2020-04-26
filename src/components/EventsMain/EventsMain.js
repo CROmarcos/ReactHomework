@@ -1,6 +1,6 @@
 import React from 'react';
 import InfoBox from '../InfoBox/InfoBox';
-import './EventsMain.scss';
+import {Events, EventsSection} from './EventsMainStyle';
 import EventsIcon from '../../assets/img/event-icon.png';
 import SearchBar from '../SearchBar/SearchBar';
 
@@ -14,10 +14,10 @@ const EventsMain=()=>{
     return(
         <main>
             <h1 class="PageTitle">{pageTitle}</h1>
-            <section>
+            <EventsSection>
                 <SearchBar/>
-            </section>
-            <section className="Events">
+            </EventsSection>
+            <Events>
                 <InfoBox url={EventsIcon} title={name} buttonText={button} hideEvent={false}/>
                 <InfoBox url={EventsIcon} title={name} buttonText={button} hideEvent={false}/>
                 <InfoBox url={EventsIcon} title={name} buttonText={button} hideEvent={false}/>
@@ -26,7 +26,7 @@ const EventsMain=()=>{
                 <InfoBox url={EventsIcon} title={name} buttonText={button} hideEvent={false}/>
                 <InfoBox url={EventsIcon} title={name} buttonText={button} hideEvent={false}/>
                 <InfoBox url={EventsIcon} title={name} buttonText={button} hideEvent={false}/>
-            </section>
+            </Events>
         </main>
     );
 }

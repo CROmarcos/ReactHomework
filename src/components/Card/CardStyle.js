@@ -1,4 +1,6 @@
-.Card {
+import styled from 'styled-components';
+
+export const CardContainer = styled.div`
     width: calc(25% - 11.25px);
     margin-right: 15px;
     margin-bottom: 40px;
@@ -35,4 +37,4 @@
         font-weight: 700;
         text-align: center;
     }
-}
+`;

@@ -1,5 +1,5 @@
 import React from 'react';
-import './HomeMain.scss';
+import {HomeMainHero, HomeMainHeroInner, HomeMainHeroContainer, HomeMainMore, HomeMainLastYear} from './HomeMainStyle';
 import Hero from '../Hero/Hero';
 import More from '../More/More';
 import LastYear from '../LastYear/LastYear'
@@ -7,19 +7,19 @@ import LastYear from '../LastYear/LastYear'
 const HomeMain=()=>{
     return(
         <main>
-            <section className="HomeMain-SectionHero">
-                <div className="HomeMain-SectionHero-Inner">
-                    <div className="HomeMain-SectionHero-Inner-Container">
+            <HomeMainHero>
+                <HomeMainHeroInner>
+                    <HomeMainHeroContainer>
                         <Hero />
-                    </div>
-                </div>
-            </section>
-            <section className="HomeMain-SectionMore">
+                    </HomeMainHeroContainer>
+                </HomeMainHeroInner>
+            </HomeMainHero>
+            <HomeMainMore>
                 <More />
-            </section>
-            <section className="HomeMain-SectionLastYear">
+            </HomeMainMore>
+            <HomeMainLastYear>
                 <LastYear />
-            </section>
+            </HomeMainLastYear>
         </main>        
     );
 }

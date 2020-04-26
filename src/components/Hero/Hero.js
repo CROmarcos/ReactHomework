@@ -1,6 +1,5 @@
 import React from 'react';
-import './Hero.scss';
-import {Link} from 'react-router-dom';
+import {HeroSection, HeroTitle, HeroOrganizer, HeroDate, HeroLogin} from './HeroStyle';
 
 const opis={
     title: 'Tjedan karijera',
@@ -11,12 +10,12 @@ const opis={
 
 const Hero=()=>{
     return(
-        <div className="Hero">
-            <h1 className="Hero-Title">{opis.title}</h1>
-            <span className="Hero-Organizer">{opis.organizer}</span>
-            <p className="Hero-Date">{opis.date}</p>
-            <Link className="Hero-Login" to="/">{opis.login}</Link>
-        </div>
+        <HeroSection>
+            <HeroTitle>{opis.title}</HeroTitle>
+            <HeroOrganizer>{opis.organizer}</HeroOrganizer>
+            <HeroDate>{opis.date}</HeroDate>
+            <HeroLogin to="/">{opis.login}</HeroLogin>
+        </HeroSection>
     );
 }
 

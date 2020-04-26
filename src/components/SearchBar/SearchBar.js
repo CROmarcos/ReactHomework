@@ -1,11 +1,9 @@
 import React from 'react';
 import './SearchBar.scss';
 
-const SearchBar=()=>{
+const SearchBar=(props)=>{
     return(
-        <div className="SearchBar">
-            
-        </div>
+        <input className="SearchBar" type="text" value={props.inputValue} onChange={props.filterCards}/>
     );
 }
 
