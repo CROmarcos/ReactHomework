@@ -1,12 +1,11 @@
 import React from 'react';
-import './More.scss';
+import {MoreSection, MoreCardContainer, MoreFindOut} from './MoreStyle';
 import About from '../../components/About/About';
 import Card from '../../components/Card/Card';
 import CardAbout from '../../assets/img/about.jpg';
 import CardSpeakers from '../../assets/img/speakers.jpg';
 import CardAgenda from '../../assets/img/calendar.jpg';
 import CardPartners from '../../assets/img/partner.jpg';
-import {Link} from 'react-router-dom';
 
 const link='Saznaj više';
 
@@ -33,16 +32,16 @@ const title={
 
 const More=()=>{
     return(
-        <div className="More">
+        <MoreSection>
             <About leftSide={false}/>
-            <Link className="More-FindOut" to="/">{link}</Link>
-            <div className="More-CardContainer">
+            <MoreFindOut to="/">{link}</MoreFindOut>
+            <MoreCardContainer>
                 <Card url={source.about} altText={altText.about} title={title.about} />
                 <Card url={source.speakers} altText={altText.speakers} title={title.speakers} />
                 <Card url={source.agenda} altText={altText.agenda} title={title.agenda} />
                 <Card url={source.partners} altText={altText.partners} title={title.partners}/>
-            </div>
-        </div>
+            </MoreCardContainer>
+        </MoreSection>
         
     );
 }
