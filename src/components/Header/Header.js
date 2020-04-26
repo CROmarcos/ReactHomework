@@ -10,7 +10,7 @@ const Header=()=>{
                 <LogoContainer to="/">
                     <LogoImage src={Logo} alt="Logo"/>
                 </LogoContainer>
-                <Navigation />
+                <Navigation/>
             </HeaderMainInner>
         </HeaderMain>
     );

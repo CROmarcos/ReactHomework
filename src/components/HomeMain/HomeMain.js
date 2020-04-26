@@ -2,9 +2,10 @@ import React from 'react';
 import {HomeMainHero, HomeMainHeroInner, HomeMainHeroContainer, HomeMainMore, HomeMainLastYear} from './HomeMainStyle';
 import Hero from '../Hero/Hero';
 import More from '../More/More';
-import LastYear from '../LastYear/LastYear'
+import LastYear from '../LastYear/LastYear';
 
 const HomeMain=()=>{
+
     return(
         <main>
             <HomeMainHero>
