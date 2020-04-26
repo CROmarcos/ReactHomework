@@ -3,7 +3,7 @@ import './SearchBar.scss';
 
 const SearchBar=(props)=>{
     return(
-        <input className="SearchBar" type="text" value={props.inputValue} onChange={props.filterCards}/>
+        <input className="SearchBar" type="text" placeholder={props.backText} onChange={(e)=>props.onValueChange(e.target.value)}/>
     );
 }
 

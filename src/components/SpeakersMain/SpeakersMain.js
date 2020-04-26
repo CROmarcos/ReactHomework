@@ -7,36 +7,35 @@ import SpekaersArray from '../../lib/Speakers';
 
 const pageTitle='Sudionici';
 
-const name={
-    jbach: 'Johan Bach',
-    sbach: 'Sebastian Bach',
-    franck: 'Johan Franck',
-    speck: 'Johan Speck',
-    boe: 'Joe Boe',
-    bow: 'El Bow',
-}
-
 const button='Prati sudionika';
 
 const SpeakersMain=()=>{
     const [speakers, setSpeakers]=useState('');
+    const [selectedSpeakers, setSelectedSpeakers]=useState('');
 
     useEffect(()=>{
         const timer=setTimeout(()=>{
             setSpeakers(SpekaersArray);
+            setSelectedSpeakers(SpekaersArray);
         }, 1000);
         return()=>clearTimeout(timer);
     },[]);
+
+    const searchSpeakers=(name)=>{
+        const search=selectedSpeakers.filter(speaker=>speaker.title.toLowerCase().includes(name.toLowerCase()));
+        return setSpeakers(search);
+    }
 
     return(
         <main>
             <h1 class="PageTitle">{pageTitle}</h1>
             <section>
-                <SearchBar/>
+                <SearchBar backText="Search speakers" onValueChange={searchSpeakers}/>
             </section>
             <section className="Speakers-Names">
-                {speakers===''}
-                <InfoBox url={SpeakersIcon} title={name.jbach} buttonText={button} hideEvent={true} />
+                {speakers==='' ? '' : speakers.map((speakers,index)=>(
+                    <InfoBox key={index} url={SpeakersIcon} title={speakers.title} buttonText={button} hideEvent={true} />
+            ))}
             </section>
         </main>
     );
