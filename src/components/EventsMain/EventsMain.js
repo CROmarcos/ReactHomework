@@ -7,8 +7,6 @@ import EventsArray from '../../lib/Events';
 
 const pageTitle='Događanja';
 
-const name='How can we benefit from React Redux';
-
 const button='Prijavi se na predavanje';
 
 const EventsMain=()=>{
