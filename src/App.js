@@ -16,8 +16,8 @@ function App() {
 
   return (
       <>
-      <Header />
       {progress.start()}
+      <Header />
       <Route exact path="/" component={Home}/>
       <Route path="/events" component={Events}/>
       <Route path="/speakers" component={Speakers}/>

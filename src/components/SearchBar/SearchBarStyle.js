@@ -1,9 +1,11 @@
-.SearchBar {
+import styled from "styled-components";
+
+export const SearchBarSection = styled.div`
     width: 100%;
     display: flex;
-}
+`;
 
-.SearchBarInput {
+export const SearchBarInput = styled.input`
     width: 400px;
     line-height: 50px;
     border: 1px solid #cecece;
@@ -14,4 +16,4 @@
     &:focus {
         border-color: #c59613;
     }
-}
+`;

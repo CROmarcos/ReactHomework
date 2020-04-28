@@ -1,9 +1,11 @@
 import React from 'react';
-import './SearchBar.scss';
+import { SearchBarSection, SearchBarInput } from './SearchBarStyle';
 
 const SearchBar=(props)=>{
     return(
-        <input className="SearchBar" type="text" placeholder={props.backText} onChange={(e)=>props.onValueChange(e.target.value)}/>
+        <SearchBarSection>
+            <SearchBarInput type="text" placeholder={props.backText} onChange={(e)=>props.onValueChange(e.target.value)}/>
+        </SearchBarSection>
     );
 }
 
