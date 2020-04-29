@@ -31,3 +31,9 @@ export const Page=styled.section`
         padding: 0;
     }
 `;
+
+export const PageTitle = styled.h1`
+    text-align: center;
+    padding: 30px 0 60px;
+    font-size: 30px;
+  `;

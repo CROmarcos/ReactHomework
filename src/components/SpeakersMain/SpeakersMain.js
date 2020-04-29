@@ -3,7 +3,7 @@ import InfoBox from '../InfoBox/InfoBox';
 import SpeakersIcon from '../../assets/img/speakers-icon.png';
 import SearchBar from '../SearchBar/SearchBar';
 import SpekaersArray from '../../lib/Speakers';
-import { Page } from '../../lib/GeneralStyles/PageStyle';
+import { Page, PageTitle } from '../../lib/GeneralStyles/PageStyle';
 
 const pageTitle='Sudionici';
 
@@ -28,7 +28,7 @@ const SpeakersMain=()=>{
 
     return(
         <main>
-            <h1 class="PageTitle">{pageTitle}</h1>
+            <PageTitle>{pageTitle}</PageTitle>
             <section>
                 <SearchBar backText="Search speakers..." onValueChange={searchSpeakers}/>
             </section>
