@@ -3,7 +3,7 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from 'react-loader-spinner';
 import { LoaderBar } from './LoaderStyle';
 
-const Loader=()=>{
+const LoaderSpinner=()=>{
     return(
         <LoaderBar>
             <Loader type="puff" width={100} height={100}/>
@@ -11,4 +11,4 @@ const Loader=()=>{
     );
 }
 
-export default Loader;
+export default LoaderSpinner;

@@ -4,6 +4,7 @@ import { Page, PageTitle } from '../lib/GeneralStyles/PageStyle';
 import EventsIcon from '../assets/img/event-icon.png';
 import SearchBar from '../components/SearchBar/SearchBar';
 import EventsArray from '../lib/Events';
+import {LoaderSpinner} from '../components/Loader/Loader';
 
 const pageTitle='Događanja';
 
