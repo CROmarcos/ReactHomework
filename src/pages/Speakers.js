@@ -4,6 +4,7 @@ import { Page, PageTitle } from '../lib/GeneralStyles/PageStyle';
 import SpeakersIcon from '../assets/img/speakers-icon.png';
 import SearchBar from '../components/SearchBar/SearchBar';
 import SpekaersArray from '../lib/Speakers';
+import LoaderSpinner from '../components/Loader/Loader';
 
 const pageTitle='Sudionici';
 
@@ -29,14 +30,18 @@ const Speakers=()=>{
     return(
         <main>
             <PageTitle>{pageTitle}</PageTitle>
-            <section>
-                <SearchBar backText="Search speakers..." onValueChange={searchSpeakers}/>
-            </section>
-            <Page>
-                {speakers==='' ? '' : speakers.map((speakers,index)=>(
-                    <InfoBox key={index} url={SpeakersIcon} title={speakers.title} buttonText={button} hideEvent={true} />
-            ))}
-            </Page>
+            {!speakers ? <LoaderSpinner/> : (
+                <>
+                    <section>
+                        <SearchBar backText="Search speakers..." onValueChange={searchSpeakers}/>
+                    </section>
+                    <Page>
+                        {speakers==='' ? '' : speakers.map((speakers,index)=>(
+                            <InfoBox key={index} url={SpeakersIcon} title={speakers.title} buttonText={button} hideEvent={true} />
+                    ))}
+                    </Page>
+                </>)
+            }
         </main>
     );
 }

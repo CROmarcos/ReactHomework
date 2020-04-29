@@ -1,12 +1,11 @@
 import React from 'react';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import Loader from 'react-loader-spinner';
-import { LoaderBar } from './LoaderStyle';
+import { LoaderBar, Spinner } from './LoaderStyle';
 
 const LoaderSpinner=()=>{
     return(
         <LoaderBar>
-            <Loader type="puff" width={100} height={100}/>
+            <Spinner type="puff" color="black" width={100} height={100}/>
         </LoaderBar>
     );
 }

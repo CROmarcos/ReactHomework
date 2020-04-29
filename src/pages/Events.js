@@ -4,7 +4,7 @@ import { Page, PageTitle } from '../lib/GeneralStyles/PageStyle';
 import EventsIcon from '../assets/img/event-icon.png';
 import SearchBar from '../components/SearchBar/SearchBar';
 import EventsArray from '../lib/Events';
-import {LoaderSpinner} from '../components/Loader/Loader';
+import LoaderSpinner from '../components/Loader/Loader';
 
 const pageTitle='Događanja';
 
@@ -30,14 +30,18 @@ const Events=()=>{
     return(
         <main>
             <PageTitle>{pageTitle}</PageTitle>
-            <section>
-                <SearchBar backText="Search events..." onValueChange={searchEvents}/>
-            </section>
-            <Page>
-                {events==='' ? '' : events.map((events,index)=>(
-                        <InfoBox key={index} url={EventsIcon} title={events.title} buttonText={button} hideEvent={false} />
-                ))}
-            </Page>
+            {!events ? <LoaderSpinner/> : (
+                <>
+                    <section>
+                        <SearchBar backText="Search events..." onValueChange={searchEvents}/>
+                    </section>
+                    <Page>
+                        {events==='' ? '' : events.map((events,index)=>(
+                                <InfoBox key={index} url={EventsIcon} title={events.title} buttonText={button} hideEvent={false} />
+                        ))}
+                    </Page>
+                </>)
+            }
         </main>
     );
 }
