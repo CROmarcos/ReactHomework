@@ -1,5 +1,6 @@
 import React from 'react';
-import {HeroSection, HeroTitle, HeroOrganizer, HeroDate, HeroLogin} from './HeroStyle';
+import {HeroSection, HeroTitle, HeroOrganizer, HeroDate} from './HeroStyle';
+import {Button} from '../../lib/GeneralStyles/PageStyle';
 
 const opis={
     title: 'Tjedan karijera',
@@ -14,7 +15,7 @@ const Hero=()=>{
             <HeroTitle>{opis.title}</HeroTitle>
             <HeroOrganizer>{opis.organizer}</HeroOrganizer>
             <HeroDate>{opis.date}</HeroDate>
-            <HeroLogin to="/">{opis.login}</HeroLogin>
+            <Button to="/">{opis.login}</Button>
         </HeroSection>
     );
 }

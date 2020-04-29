@@ -1,5 +1,6 @@
 import React from 'react';
-import {MoreSection, MoreCardContainer, MoreFindOut} from './MoreStyle';
+import {MoreSection, MoreCardContainer} from './MoreStyle';
+import {Button} from '../../lib/GeneralStyles/PageStyle';
 import About from '../../components/About/About';
 import Card from '../../components/Card/Card';
 import CardAbout from '../../assets/img/about.jpg';
@@ -34,7 +35,7 @@ const More=()=>{
     return(
         <MoreSection>
             <About leftSide={false}/>
-            <MoreFindOut to="/">{link}</MoreFindOut>
+            <Button to="/">{link}</Button>
             <MoreCardContainer>
                 <Card url={source.about} altText={altText.about} title={title.about} />
                 <Card url={source.speakers} altText={altText.speakers} title={title.speakers} />
