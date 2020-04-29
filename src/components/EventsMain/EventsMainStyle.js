@@ -31,7 +31,3 @@ export const Events=styled.section`
         padding: 0;
     }
 `;
-
-export const EventsSection=styled.section`
-    margin-bottom: 40px;
-`;

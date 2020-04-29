@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import InfoBox from '../InfoBox/InfoBox';
-import {Events, EventsSection} from './EventsMainStyle';
+import { Events } from './EventsMainStyle';
 import EventsIcon from '../../assets/img/event-icon.png';
 import SearchBar from '../SearchBar/SearchBar';
 import EventsArray from '../../lib/Events';
@@ -29,9 +29,9 @@ const EventsMain=()=>{
     return(
         <main>
             <h1 class="PageTitle">{pageTitle}</h1>
-            <EventsSection>
-                <SearchBar backText="Search events" onValueChange={searchEvents}/>
-            </EventsSection>
+            <section>
+                <SearchBar backText="Search events..." onValueChange={searchEvents}/>
+            </section>
             <Events>
                 {events==='' ? '' : events.map((events,index)=>(
                         <InfoBox key={index} url={EventsIcon} title={events.title} buttonText={button} hideEvent={false} />
