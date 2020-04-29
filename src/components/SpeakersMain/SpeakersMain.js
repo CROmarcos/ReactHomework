@@ -3,7 +3,7 @@ import InfoBox from '../InfoBox/InfoBox';
 import SpeakersIcon from '../../assets/img/speakers-icon.png';
 import SearchBar from '../SearchBar/SearchBar';
 import SpekaersArray from '../../lib/Speakers';
-import { SpeakersList } from './SpeakersMainStyle';
+import { Page } from '../../lib/GeneralStyles/PageStyle';
 
 const pageTitle='Sudionici';
 
@@ -32,11 +32,11 @@ const SpeakersMain=()=>{
             <section>
                 <SearchBar backText="Search speakers..." onValueChange={searchSpeakers}/>
             </section>
-            <SpeakersList>
+            <Page>
                 {speakers==='' ? '' : speakers.map((speakers,index)=>(
                     <InfoBox key={index} url={SpeakersIcon} title={speakers.title} buttonText={button} hideEvent={true} />
             ))}
-            </SpeakersList>
+            </Page>
         </main>
     );
 }

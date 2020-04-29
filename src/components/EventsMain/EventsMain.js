@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import InfoBox from '../InfoBox/InfoBox';
-import { Events } from './EventsMainStyle';
+import { Page } from '../../lib/GeneralStyles/PageStyle';
 import EventsIcon from '../../assets/img/event-icon.png';
 import SearchBar from '../SearchBar/SearchBar';
 import EventsArray from '../../lib/Events';
@@ -32,11 +32,11 @@ const EventsMain=()=>{
             <section>
                 <SearchBar backText="Search events..." onValueChange={searchEvents}/>
             </section>
-            <Events>
+            <Page>
                 {events==='' ? '' : events.map((events,index)=>(
                         <InfoBox key={index} url={EventsIcon} title={events.title} buttonText={button} hideEvent={false} />
                 ))}
-            </Events>
+            </Page>
         </main>
     );
 }
