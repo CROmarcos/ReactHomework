@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Logo from '../../assets/img/logo.png';
 import {HeaderMain, HeaderMainInner, LogoContainer, LogoImage} from './HeaderStyle';
 import Navigation from '../../components/Navigation/Navigation';
