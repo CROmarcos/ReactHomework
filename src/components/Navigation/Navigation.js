@@ -1,30 +1,21 @@
-import React, {useState, useEffect} from 'react';
-import {MainNavi, MainNaviList, MainNaviListItem, MainNaviLink} from './NavigationStyle.js';
+import React, { useContext } from 'react';
+import { MainNavi, MainNaviList, MainNaviListItem, MainNaviLink } from './NavigationStyle.js';
+import { AuthContext } from '../../context/AuthContext.js';
 
 const links={
-    speakers: 'Sudionici',
-    events: 'Događanja',
-    contacts: 'Kontakt',
-    login: 'Prijavi se',
-    logout: 'Odjavi se',
+    speakers: 'Speakers',
+    events: 'Events',
+    register: 'Register',
+    login: 'Login',
+    logout: 'Logout',
 }
 
 const Navigation=()=>{
-    const [isAuth,setIsAuth]=useState(false);
-
-    useEffect(()=>{
-        if(localStorage.getItem('token')!==null){
-            setIsAuth(true);
-        }
-        else{
-            setIsAuth(false);
-        }
-    },[]);
+    const auth=useContext(AuthContext);
 
     const handleLogout=(e)=>{
-        e.preventDefault();
         localStorage.removeItem('token');
-        setIsAuth(false);
+        auth.logout();
     }
 
     return(
@@ -36,17 +27,17 @@ const Navigation=()=>{
                 <MainNaviListItem>
                     <MainNaviLink to="/events">{links.events}</MainNaviLink>
                 </MainNaviListItem>
-                {!isAuth ?
+                {!auth.isLoggedIn ?
                 <>
                     <MainNaviListItem>
-                        <MainNaviLink to="/register">{links.contacts}</MainNaviLink>
+                        <MainNaviLink to="/register">{links.register}</MainNaviLink>
                     </MainNaviListItem>
                     <MainNaviListItem>
                         <MainNaviLink to="/login">{links.login}</MainNaviLink>
                     </MainNaviListItem>
                 </> :
                     <MainNaviListItem>
-                        <MainNaviLink to="/logout" onClick={handleLogout}>{links.logout}</MainNaviLink>
+                        <MainNaviLink to="/" onClick={handleLogout}>{links.logout}</MainNaviLink>
                     </MainNaviListItem>
                 }
             </MainNaviList>

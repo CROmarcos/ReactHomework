@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import {registerUser} from '../../../api/register';
+import { registerUser } from '../../../api/register';
+import { PageTitle } from '../../../lib/GeneralStyles/PageStyle';
+import { useForm } from 'react-hook-form';
 
 import {
     Form,
@@ -14,66 +16,40 @@ import {
     FormButton,
 } from '../FormStyles';
 
-const RegisterForm = (props) => {
-    const history = useHistory();
-    const [data, setData]=useState({
-        username:'',
-        password:'',
-    });
+const RegisterForm=()=>{
+    const history=useHistory();
+    const [error, setError]=useState(false);
+    const {register, handleSubmit, errors}=useForm();
 
-    const [error, setError]=useState('');
-
-    const handleChange=(e)=>{
-        setData({
-            ...data,
-            [e.target.name]: e.target.value,
-        });
-        console.log(data);
-    }
-
-    const handleSubmit=(e)=>{
-        e.preventDefault();  
-        registerUser(data).then(res=>{
+    const onSubmit=async(data)=>{ 
+        registerUser(data).then((res)=>{
             if(res.error){
-                setError('PW is too short!');
-            }
-            else if(res.message){
-                setError('US already exists!');
+                setError(true);
             }
             else{
-                setError('');
-                console.log(res);
                 history.push('/login');
             }
         })
     }
 
     const registerForm =
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+            <PageTitle>Register</PageTitle>
             <FormRow>
                 <FormAdditionalLink to="/login">Already registered? Click here to login!</FormAdditionalLink>
             </FormRow>
             <FormRow>
                 <FormLabel htmlFor="username">Username</FormLabel>
-                <FormInput
-                    type="text"
-                    id="username"
-                    name="username"
-                    value={data.username}
-                    onChange={handleChange}
-                    required />
-                {error && <FormInputValidation>{error}</FormInputValidation>}
+                <FormInput type="text" id="username" name="username" ref={register({ required: true, minLength: 5})}/>
+                {errors.username && errors.username.type==="required" && (<FormInputValidation>Insert your username, please!</FormInputValidation>)}
+                {errors.username && errors.username.type==="minLength" && (<FormInputValidation>Username is too short!</FormInputValidation>)}
+                {!errors.username && error && (<FormInputValidation>Username already exists!</FormInputValidation>)}
             </FormRow>
             <FormRow>
                 <FormLabel htmlFor="password">Password</FormLabel>
-                <FormInput
-                    type="password"
-                    id="password"
-                    name="password"
-                    value={data.password}
-                    onChange={handleChange}
-                    required />
-                {error && <FormInputValidation>{error}</FormInputValidation>}
+                <FormInput type="password" id="password" name="password" ref={register({ required: true, minLength: 8})}/>
+                {errors.password && errors.password.type==="required" && (<FormInputValidation>Password is required!</FormInputValidation>)}
+                {errors.password && errors.password.type==="minLength" && (<FormInputValidation>Password is too short!</FormInputValidation>)}
             </FormRow>
             <FormButtonRow>
                 <FormButton>Register</FormButton>
